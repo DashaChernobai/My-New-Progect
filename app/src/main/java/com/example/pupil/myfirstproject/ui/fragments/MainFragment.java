@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.pupil.myfirstproject.R;
 
-public class MainFragment extends Fragment {
+public class MainFragment extends BaseFragment {
 
     private MainViewModel mViewModel;
 
@@ -31,5 +31,8 @@ public class MainFragment extends Fragment {
         mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         // TODO: Use the ViewModel
     }
-
+    @Override
+    public String getName() {
+        return "Main";
+    }
 }

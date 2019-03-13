@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.pupil.myfirstproject.R;
 
-public class GreenFragment extends Fragment {
+public class GreenFragment extends BaseFragment {
 
     private GreenViewModel mViewModel;
 
@@ -32,4 +32,8 @@ public class GreenFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @Override//подписывает кнопку
+    public String getName() {
+        return "Green";
+    }
 }

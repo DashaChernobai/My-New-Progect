@@ -2,13 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorOrange"
     android:layout_height="match_parent"
-    android:background="@color/colorGreen"
-    tools:context=".ui.fragments.MainFragment">
+    tools:context=".ui.fragments.OrangeFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorGreen" />
+        android:background="@color/colorOrange" />
 
 </FrameLayout>

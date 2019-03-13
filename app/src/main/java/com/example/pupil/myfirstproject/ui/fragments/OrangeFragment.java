@@ -11,29 +11,28 @@ import android.view.ViewGroup;
 
 import com.example.pupil.myfirstproject.R;
 
-public class PurpleFragment extends BaseFragment {
+public class OrangeFragment extends BaseFragment {
 
-    private PurpleViewModel mViewModel;
+    private OrangeViewModel mViewModel;
 
-    public static PurpleFragment newInstance() {
-        return new PurpleFragment();
+    public static OrangeFragment newInstance() {
+        return new OrangeFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.purple_fragment, container, false);
+        return inflater.inflate(R.layout.orange_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(PurpleViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(OrangeViewModel.class);
         // TODO: Use the ViewModel
     }
-
     @Override
     public String getName() {
-        return "Purple";
+        return "Orange";
     }
 }
