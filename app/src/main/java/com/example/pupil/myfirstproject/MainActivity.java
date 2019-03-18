@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.pupil.myfirstproject.adapters.MyFragmentPagerAdapter;
 import com.example.pupil.myfirstproject.ui.fragments.BaseFragment;
@@ -45,6 +46,27 @@ public class MainActivity extends AppCompatActivity {
         adapter.setList(fragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition() == 2) {
+                    Toast.makeText(getBaseContext(), "Position " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                if (tab.getPosition() == 2) {
+                    Toast.makeText(getBaseContext(), "Position" + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
         //FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         //fragmentTransaction.replace(container.getId(),mainFragment,"MAIN_FRAGMENT");
